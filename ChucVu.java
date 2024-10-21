@@ -1,10 +1,34 @@
+import java.util.ArrayList;
+import java.util.Comparator;
+import java.util.List;
+
 public class ChucVu {
     public String MaCV;
     public String TenCV;
+
+    public List<NhanVien> listTP = new ArrayList<>();
+    public List<NhanVien> listPP = new ArrayList<>();
+    public List<NhanVien> listNV = new ArrayList<>();
+
     // Constructor không tham số, khởi tạo các biến về 0.
     public ChucVu() {
         MaCV = TenCV = "";
     }
+
+    public void addNhanVien(NhanVien x) {
+        if(x.getChucVu().equals("TP")){
+            listTP.add(x);
+        }
+
+        else if(x.getChucVu().equals("PP")){
+            listPP.add(x);
+        }
+
+        else if(x.getChucVu().equals("NV")){
+            listNV.add(x);
+        }
+    }
+
     // Constructor với tham số là tên chức vụ.
     public ChucVu(String TenCV){
         this.MaCV = chuan_hoa(TenCV);
@@ -35,6 +59,35 @@ public class ChucVu {
     // Phương thức trả về tên chức vụ
     public String getTenCV() {
         return TenCV;
+    }
+
+    //code chưa báo đỏ nhưng phải khai thêm chucvu vào trong nhan vien( can review them)
+
+    //code để cho ra danh sách theo tìm kiếm mã chức vụ
+    
+     public List<NhanVien> searchNhanVienPB(String ChucVu) {
+        listTP.sort(Comparator.comparing(NhanVien::getTenNV));
+        listPP.sort(Comparator.comparing(NhanVien::getTenNV));
+        listNV.sort(Comparator.comparing(NhanVien::getTenNV)); // sắp xếp theo thứ tự từ điển của tên nhân viên
+        if(ChucVu.equals("")){
+            for(NhanVien x : listTP){
+               System.out.println(x);
+            }
+            for(NhanVien x : listPP){
+               System.out.println(x);
+            }
+            for(NhanVien x : listNV){
+               System.out.println(x);
+            }
+        }
+        if(ChucVu.equals("TP")){
+            return listTP;
+        }
+
+        else if(ChucVu.equals("PP")){
+            return listPP;
+        }
+        return listNV;
     }
     @Override
     public String toString() {
