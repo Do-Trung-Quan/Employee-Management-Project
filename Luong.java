@@ -15,7 +15,7 @@ public class Luong {
         return maHD;
     }
     // Phương thức gán chức vụ cho nhân viên.
-    public void setChucvu(ChucVu chucvu) {
+    public void setChucVu(ChucVu chucvu) {
         this.chucVu = chucvu;
     }
     // Phương thức thiết lập lương cơ bản dựa trên chức vụ.
