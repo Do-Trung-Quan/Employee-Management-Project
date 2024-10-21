@@ -11,7 +11,7 @@ public class ChucVu {
         this.TenCV = TenCV;
     }
     // Phương pháp chuẩn hóa để khởi tạo MaCV
-    public String ChuanHoa (String z){
+    public String chuan_hoa (String z){
         String[] s = z.split("\\s+"); //Tách từng từ
         String a = "";
         for (int i = 0; i < s.length; i++){
@@ -20,20 +20,20 @@ public class ChucVu {
         return a;
     }
     // Phương thức thiết lập mã chức vụ
-    public void SetMaChucVu(String ma_ChucVu) {
-        this.MaCV = ma_ChucVu;
+    public void setMaCV(String ma_CV) {
+        this.MaCV = ma_CV;
     }
     // Phương thức trả về mã chức vụ
-    public String GetMaChucVu() {
+    public String getMaCV(){
         return MaCV;
     }
 
     // Phương thức thiết lập tên chức vụ
-    public void SetTenChucVu(String ten_ChucVu) {
-        this.TenCV = ten_ChucVu;
+    public void setTenCV(String ten_CV) {
+        this.TenCV = ten_CV;
     }
     // Phương thức trả về tên chức vụ
-    public String GetTenChucVu() {
+    public String getTenCV() {
         return TenCV;
     }
     @Override
