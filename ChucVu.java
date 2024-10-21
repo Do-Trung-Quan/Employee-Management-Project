@@ -5,6 +5,7 @@ public class ChucVu {
     public ChucVu() {
         MaCV = TenCV = "";
     }
+    
     // Constructor với tham số là tên chức vụ.
     public ChucVu(String TenCV){
         this.MaCV = chuan_hoa(TenCV);
@@ -41,3 +42,4 @@ public class ChucVu {
         return MaCV + " " + TenCV;
     }
 }
+//gudd
