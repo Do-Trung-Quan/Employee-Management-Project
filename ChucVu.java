@@ -5,14 +5,13 @@ public class ChucVu {
     public ChucVu() {
         MaCV = TenCV = "";
     }
-    
     // Constructor với tham số là tên chức vụ.
     public ChucVu(String TenCV){
         this.MaCV = chuan_hoa(TenCV);
         this.TenCV = TenCV;
     }
     // Phương pháp chuẩn hóa để khởi tạo MaCV
-    public String chuan_hoa (String z){
+    public String ChuanHoa (String z){
         String[] s = z.split("\\s+"); //Tách từng từ
         String a = "";
         for (int i = 0; i < s.length; i++){
@@ -21,20 +20,20 @@ public class ChucVu {
         return a;
     }
     // Phương thức thiết lập mã chức vụ
-    public void setMa_ChucVu(String ma_ChucVu) {
+    public void SetMaChucVu(String ma_ChucVu) {
         this.MaCV = ma_ChucVu;
     }
     // Phương thức trả về mã chức vụ
-    public String getMa_ChucVu() {
+    public String GetMaChucVu() {
         return MaCV;
     }
 
     // Phương thức thiết lập tên chức vụ
-    public void setTen_ChucVu(String ten_ChucVu) {
+    public void SetTenChucVu(String ten_ChucVu) {
         this.TenCV = ten_ChucVu;
     }
     // Phương thức trả về tên chức vụ
-    public String getTen_ChucVu() {
+    public String GetTenChucVu() {
         return TenCV;
     }
     @Override
